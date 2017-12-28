@@ -1,0 +1,48 @@
+.bubble-container {
+	padding:1px;
+}
+
+.bubble-card {
+ list-style:none;
+ margin:0;
+ padding:4px;
+ text-align:center;
+
+}
+.bubble-card li{
+  display:inline-block;
+   padding: 5px 0px 25px 10px;
+		border-radius:25px;
+		box-shadow:0 0 15px rgba(0,0,0,0.5);
+		transition:all 0.2s ease-in-out;
+		text-align:center;
+
+}
+.details {
+			float:left;
+			text-align:left;
+			transition:all 0.5s ease-in-out;
+			min-width:250px;
+      margin:10px;
+      width:300px;
+      height:250px;
+      margin-bottom:0px;
+}
+
+
+img {
+			display:inline-block;
+			width:100%;
+			height:auto;
+			max-width:100px;
+			float:left;
+			border-radius:50%;
+			box-shadow:0 0 2px rgba(0,0,0,0.5);
+			transition:all 0.5s ease-in-out;
+		}
+
+.card-bubble{
+  margin-top: 25%;
+  float: right;
+  padding:5px;
+}

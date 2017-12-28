@@ -1,0 +1,33 @@
+<div class="mat-typography">
+  <div class="grey-alternate-theme" style="width:100%">
+    <mat-toolbar color="primary">
+      <span>Parveen R Eswaran</span>
+      <span class="example-spacer"></span>
+      <button mat-button routerLink="/aboutMe" fxShow="false" fxShow.gt-sm>About Me</button>
+      <button mat-button routerLink="/" fxShow="false" fxShow.gt-sm>Contact Form</button>
+      <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-menu x-position="before" #menu="matMenu">
+      <button mat-menu-item routerLink="/aboutMe" >
+        <mat-icon>person</mat-icon>
+        <span>About Me</span>
+      </button>
+      <button mat-menu-item routerLink="/">
+        <mat-icon>contact_mail</mat-icon>
+        <span>Contact Me</span>
+      </button>
+
+      <!--<button md-menu-item>Help</button>-->
+    </mat-menu>
+    <div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill>
+      <div fxFlex="25" class="sec1" fxFlex.xs="50">
+        first-section
+      </div>
+      <div fxFlex="75" class="sec3" fxFlex.xs="50">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+@import '~@angular/material/theming';
+
+$general-typography: mat-typography-config(
+  $font-family: '"Open Sans", "Helvetica Neue", sans-serif',
+  $body-2: mat-typography-level(14px, 24px, 600)
+);
+
+$secondary-typography: mat-typography-config(
+  $font-family: 'Roboto, sans-serif'
+);
+
+
+// Be sure that you only ever include this mixin once!
+@include mat-core($general-typography);
+
+$my-app-primary: mat-palette($mat-indigo);
+$my-app-accent:  mat-palette($mat-amber, A200, A100, A400);
+$my-app-warn:    mat-palette($mat-red);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+
+@include angular-material-theme($my-app-theme);
+
+.grey-alternate-theme {
+    $grey-alternate-primary: mat-palette($mat-blue-grey, 800);
+    $grey-alternate-accent:  mat-palette($mat-yellow, 400);
+
+    $grey-alternate-theme: mat-dark-theme($grey-alternate-primary, $grey-alternate-accent);
+
+    color: rgba(150,150,150,0.8); //No default color defined in themes apparently
+
+    @include mat-core-theme($grey-alternate-theme);  //angular-material-theme() is an owerkill
+
+    @include mat-toolbar-typography($secondary-typography);
+
+}
